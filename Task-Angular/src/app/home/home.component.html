@@ -1,0 +1,36 @@
+<h1>Hi {{currentUser.username}}!</h1>
+<p>You're logged in with Angular 7!!</p>
+<!-- <h3>All registered users:</h3> -->
+<ul> 
+    <!-- <li *ngFor="let user of users">
+        {{user.username}} ({{user.firstName}} {{user.lastName}})
+        - <a (click)="deleteUser(user.id)" class="text-danger">Delete</a>
+    </li> -->
+    
+    <table class="table table-striped">
+            <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">API</th>
+              <th scope="col">Select</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <th scope="row"> 1 </th>
+              <td>/posts/1/comments</td>
+              <td><a routerLink="/dashboard" class="btn btn-link">Click here</a></td>
+            </tr>
+            <tr>
+                <th scope="row"> 2 </th>
+                <td>/posts</td>
+                <td><a routerLink="/result" class="btn btn-link">Click here</a></td>
+            </tr>
+            <tr>
+                <th scope="row"> 3 </th>
+                <td>/posts/1</td>
+                <td><a routerLink="/result" class="btn btn-link">Click here</a></td>
+            </tr>
+            </tbody>
+          </table>
+</ul>

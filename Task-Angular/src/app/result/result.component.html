@@ -1,0 +1,38 @@
+
+<h1>Hi {{currentUser.username}}!</h1>
+<p>You're logged in with Angular 7!!</p>
+<p>Result of your api</p>
+<!-- <h3>All registered users:</h3> -->
+<!-- <ul>  -->
+    <!-- <li *ngFor="let user of users">
+        {{user.username}} ({{user.firstName}} {{user.lastName}})
+        - <a (click)="deleteUser(user.id)" class="text-danger">Delete</a>
+    </li> -->
+    <div  style="width:100%; margin-left: -16%">
+    <table class="table table-striped">
+            <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">UserId</th>
+              <th scope="col">Id</th>
+              <th scope="col">Title</th>
+              <th scope="col">Body</th>
+            </tr>
+            </thead>
+            <tbody>    
+               
+            <tr *ngFor="let result of results; index as i">
+                    <th scope="row">{{ i + 1 }} </th>
+                    <th scope="row">{{ result.userId |number}} </th>
+                    <th scope="row">{{ result.id |number}} </th>
+                    <th scope="row">{{ result.title }} </th>
+                    <th scope="row">{{ result.body }} </th>
+              <!-- <td></td> -->
+              
+              <!-- <td>{{ country.area | number }} sfsfs</td>
+              <td>{{ country.population | number }} sfs</td> -->
+            </tr>
+            </tbody>
+          </table>
+    </div>
+<!-- </ul> -->
