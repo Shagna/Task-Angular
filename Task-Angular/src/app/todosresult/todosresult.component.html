@@ -1,0 +1,25 @@
+
+<h2>Result of your api 'users/1/todos'</h2><br>
+<div  style="width:100%; margin-left: -16%">
+<table class="table table-striped" style="width:100%;">
+        <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">UserId</th>
+          <th scope="col">Id</th>
+          <th scope="col">Title</th>
+          <th scope="col">Completed</th>
+        </tr>
+        </thead>
+        <tbody>    
+           
+        <tr *ngFor="let result of todoresult; index as i">
+                <th scope="row">{{ i + 1 }} </th>
+                <td scope="row">{{ result.userId |number}} </td>
+                <td scope="row">{{ result.id |number}} </td>
+                <td scope="row">{{ result.title }} </td>
+                <td scope="row">{{ result.completed }} </td>
+        </tr>
+        </tbody>
+      </table>
+</div>

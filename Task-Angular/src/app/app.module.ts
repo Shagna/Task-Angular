@@ -16,13 +16,20 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ResultComponent } from './result/result.component';
+import { TodosresultComponent } from './todosresult/todosresult.component';
+import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+
+
+import {MatTableModule,MatCardModule} from '@angular/material'; 
 
 @NgModule({
     imports: [
         BrowserModule,
         ReactiveFormsModule,
         HttpClientModule,
-        routing
+        routing,
+        MatTableModule,
+        MatCardModule
     ],
     declarations: [
         AppComponent,
@@ -31,7 +38,10 @@ import { ResultComponent } from './result/result.component';
         LoginComponent,
         RegisterComponent,
         DashboardComponent,
-        ResultComponent
+        ResultComponent,
+        TodosresultComponent,
+        PagenotfoundComponent,
+        
     ],
     providers: [
         { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },

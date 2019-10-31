@@ -5,12 +5,30 @@ import { first } from 'rxjs/operators';
 import { User,Result } from '../_models';
 import { UserService, AuthenticationService } from '../_services';
 
-@Component({ templateUrl: 'home.component.html' })
+export interface Getapi {
+    id: number;
+    data: string
+}
+export const GETAPI: Getapi[] = [
+    { id: 1, data: '/posts/1/comments' },
+    { id: 2, data: '/posts' },
+    { id: 2, data: '/posts/1' },
+    
+  ];
+@Component({ selector: 'app-home', 
+    templateUrl: 'home.component.html' })
+
 export class HomeComponent implements OnInit, OnDestroy {
-   
+    
+
+    getapi= GETAPI;
     currentUser: User;
     currentUserSubscription: Subscription;
     users: User[] = [];
+    selectedApi: Getapi;
+        onSelect(getapi: Getapi): void {
+        this.selectedApi = getapi;
+    }
 
     constructor(
         private authenticationService: AuthenticationService,

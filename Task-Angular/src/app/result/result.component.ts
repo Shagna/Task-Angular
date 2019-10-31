@@ -16,10 +16,10 @@ export class ResultComponent implements OnInit {
     
   ngOnInit() {
 
-      this.dataService.sendGetRequest1().subscribe((data: any[])=>{
-      console.log(data);
-      this.results = data;
-    }) 
+        this.dataService.sendGetRequest1().subscribe((data: any[])=>{
+        console.log(data);
+        this.results = data;
+      }) 
   }
 
 
