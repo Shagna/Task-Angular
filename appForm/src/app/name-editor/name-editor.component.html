@@ -1,0 +1,17 @@
+<label>
+    Name   :
+    <input type="text" [formControl]="name">
+</label><br><br>
+<label>
+    City :
+    <input type="text" [formControl]="city" >
+</label>
+
+<p>
+    <button (click)="updateName()">Update Name</button>
+</p>
+
+<p>
+    Value: {{ name.value }}
+           {{ city.value }}
+</p>
